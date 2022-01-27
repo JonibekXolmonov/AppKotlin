@@ -4,27 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="top"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/edt_edit_text"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="10dp"
-        android:singleLine="true"
-        android:padding="10dp"/>
+        android:layout_marginTop="20dp"
+        app:hintTextColor="@color/black">
 
-    <TextView
-        android:id="@+id/tv_text_view"
-        android:padding="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/black"
-        android:textSize="18sp" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:singleLine="true"
+            android:hint="Detected number input..."
+            android:textColorHint="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 </LinearLayout>
